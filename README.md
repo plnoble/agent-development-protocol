@@ -51,6 +51,25 @@ CLAUDE.md
 
 ## Prompt for Future Agents
 
+If the agent can read GitHub directly, use this startup prompt:
+
+```text
+Read https://github.com/plnoble/agent-development-protocol README.md and AGENTS.md first.
+Follow README.md to initialize the current workspace.
+Then use agent-dev-protocol, read the current workspace AGENTS.md and .omx/development/current.md, and start development.
+```
+
+If GitHub page reading is unstable, use the raw file URLs:
+
+```text
+Read these two files first:
+https://raw.githubusercontent.com/plnoble/agent-development-protocol/main/README.md
+https://raw.githubusercontent.com/plnoble/agent-development-protocol/main/AGENTS.md
+
+Follow README.md to initialize the current workspace.
+Then use agent-dev-protocol, read the current workspace AGENTS.md and .omx/development/current.md, and start development.
+```
+
 When starting development in a project that has been initialized with this protocol, tell the agent:
 
 ```text
