@@ -13,7 +13,7 @@ Added shared protocol files, an initializer script, a project-level Claude skill
 - `scripts/init-agent-protocol.ps1` creates the expected protocol files in a temporary project.
 - Running the initializer a second time skips existing files and does not overwrite them.
 - Generated Markdown preserves inline-code backticks and fills the project name correctly.
-- `C:\Users\87953\.codex\skills\agent-dev-protocol` passes `quick_validate.py`.
+- The global Codex `agent-dev-protocol` skill passes `quick_validate.py`.
 - `.claude/skills/agent-dev-protocol` passes `quick_validate.py`.
 - Enhanced initializer creates `.claude/skills/agent-dev-protocol/SKILL.md`, `.omx/development/reflections.md`, and `.omx/development/quality-gates.md`.
 - Enhanced initializer skips all existing files on rerun.
