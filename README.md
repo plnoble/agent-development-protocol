@@ -12,10 +12,23 @@ Use it to initialize a project with:
 
 ## Initialize a Project
 
-From the target project directory, run:
+Clone this protocol repository once:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\87953\Documents\Development-Prompt\scripts\init-agent-protocol.ps1" -ProjectName "Your Project Name"
+git clone https://github.com/plnoble/agent-development-protocol.git
+```
+
+Then run the initializer from the target project directory. Replace `<protocol-repo>` with the path where you cloned this repository:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "<protocol-repo>\scripts\init-agent-protocol.ps1" -ProjectName "Your Project Name"
+```
+
+Example:
+
+```powershell
+cd "<target-project>"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "<protocol-repo>\scripts\init-agent-protocol.ps1" -ProjectName "Your Project"
 ```
 
 The initializer creates missing protocol files and skips existing files without overwriting them.
@@ -58,5 +71,5 @@ Use agent-dev-protocol. Read AGENTS.md and .omx/development/current.md before ch
 
 - `AGENTS.md` is the cross-tool source of truth.
 - `CLAUDE.md` and `.claude/skills/` help Claude Code discover the same protocol.
-- Codex can use the global skill at `C:\Users\87953\.codex\skills\agent-dev-protocol` when installed locally.
+- Codex can use `agent-dev-protocol` as a global skill when installed in the local Codex skills directory.
 - The protocol is intentionally compact. Put project-specific rules in `AGENTS.md`; put temporary state in `.omx/development/current.md`.
